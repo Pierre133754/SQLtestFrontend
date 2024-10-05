@@ -4,7 +4,7 @@ export default function Test() {
     const [comments, setComments] = useState()
     
     useEffect(() => {
-        fetch(import.meta.env.VITE_API+'/comments').then(res => res.json()).then(data => setComments(data))
+        fetch('http://sqltestbackend-production.up.railway.app/comments').then(res => res.json()).then(data => setComments(data))
     },[])
 
     return (
@@ -14,7 +14,7 @@ export default function Test() {
                     e.preventDefault()
                     const user = document.getElementById('user').value
                     const comment = document.getElementById('comment').value
-                    await fetch(import.meta.env.VITE_API+'/comments', {
+                    await fetch('http://sqltestbackend-production.up.railway.app/comments', {
                         method: 'POST',
                         headers: {
                             'Accept': 'application/json',
@@ -25,7 +25,7 @@ export default function Test() {
                             comment: comment
                         })
                     })
-                    fetch(import.meta.env.VITE_API+'/comments').then(res => res.json()).then(data => setComments(data))
+                    fetch('http://sqltestbackend-production.up.railway.app/comments').then(res => res.json()).then(data => setComments(data))
                 }}>
                     <input type="text" id="user" name="user" placeholder="Username"></input>
                     <textarea id="comment" name="comment" placeholder="Message" rows={5} cols={50}></textarea>
