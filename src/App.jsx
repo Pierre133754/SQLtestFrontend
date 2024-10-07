@@ -79,7 +79,7 @@ function App() {
           <div className='CPTintro'>
             <h2>Mes Compétences</h2>
             <p>Je connais les langages et librairies suivantes : HTML, CSS, JavaScript, React, Node.js</p>
-            <p className='indication'>Passer la souris sur les logos pour activer leurs physics</p>
+            <p className='indication'>Passer la souris sur les logos</p>
           </div>
           <div className='CPTcanvas'>
             <Balls />
