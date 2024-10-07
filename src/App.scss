@@ -188,7 +188,7 @@ main {
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        gap: 30px;
+        gap: 20px;
         &Whole {
             max-width: 90vw;
             word-wrap: break-word;
@@ -200,6 +200,9 @@ main {
             padding: 10px;
             background-color: lightgray;
             border-radius: 10px;
+            &User {
+                font-weight: bold;
+            }
         }
     }
 }
